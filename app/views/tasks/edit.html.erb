@@ -1,0 +1,14 @@
+<%= form_with model: @task do |t| %>
+  <%= t.label :title %>
+  <%= t.text_field :title, placeholder: @task.title %>
+
+  <%= t.label :details %>
+  <%= t.text_field :details, placeholder: @task.details %>
+
+  <%= t.label :completed %>
+  <%= t.check_box :completed %>
+
+  <%= t.submit %>
+<% end %>
+
+<p><%= link_to 'Back to tasks', tasks_path %></p>
